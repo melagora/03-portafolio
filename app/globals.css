@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+/*ESTILOS GLOBALES GENERALES*/
+
 html {
   scroll-behavior: smooth;
+}
+
+/* ESTILOS PARA EL NAV */
+
+.enlacesMenu {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  height: 100%;
+}
+
+.enlacesMenu:hover {
+  background-color: #bb4d00;
+  text-decoration: underline;
 }

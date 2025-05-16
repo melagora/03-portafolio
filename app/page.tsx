@@ -1,24 +1,16 @@
+import { time } from "console";
+import Menu from "./components/Menu"; // ajusta el path si cambia
+
 export default function Home() {
   return (
     <div>
       <header className="h-screen">
-        <nav className="flex h-[10%] bg-gray-800 text-white p-10 items-center">
-          <section className=" w-[50%] flex justify-start">
-            <p>CV - Melvin González</p>
-          </section>
-          <section className="w-[50%] flex justify-around">
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#educacion">Educación</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
-          </section>
-        </nav>
+        <Menu />
         <section className="px-20 h-[90%] bg-amber-100">
           <p>1</p>
         </section>
       </header>
-      <body>
+      <main>
         <section className="p-20 h-screen bg-amber-200" id="sobre-mi">
           <p>Sobre mí</p>
         </section>
@@ -34,8 +26,24 @@ export default function Home() {
         <section className="p-20 h-screen bg-amber-600" id="contacto">
           <p>Contactos</p>
         </section>
-      </body>
-      <footer></footer>
+      </main>
+      <footer className="bg-amber-700 text-center p-5">
+        <div className="font-bold">
+          <p>
+            &copy; {new Date().getFullYear()}{" "}
+            <a
+              href="https://www.linkedin.com/in/melagora/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" border-y-3 p-1 text-white border-black hover:text-black hover:border-white"
+              title="Melvin González LinkedIn"
+            >
+              MELVIN GONZÁLEZ
+            </a>{" "}
+            - Todos los derechos reservados -
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
