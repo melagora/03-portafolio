@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Menu from "./components/Menu";
+import Menu from "./components/home/Menu";
+import BotonCV from "./components/home/BotonCV";
+import { ToastContainer } from "react-toastify";
+import perfil from "./public/perfil.jpg";
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -23,34 +26,62 @@ export default function Home() {
             loop
             muted
             playsInline
-            className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+            preload="auto"
+            className=" absolute top-0 left-0 w-full h-full object-cover z-[-1]"
           >
             <source src="/homeVideoBackground.mp4" type="video/mp4" />
             Tu navegador no soporta el video.
           </video>
-          <div className="relative z-10 text-white flex items-center justify-center h-full">
-            <p className="text-3xl font-bold">video de muestra</p>
+          <div className="relative z-10 text-white bg-cyan-950/75 flex items-center text-center justify-center h-full">
+            <div className=" p-10 gap-3 w-[55%] h-full flex flex-col items-center justify-center">
+              <p className="text-3xl">Soy Melvin González,</p>
+              <p className="text-5xl font-bold">Desarrollador Front-End</p>
+              <p className="text-sm font-extralight">
+                Desarrollador con enfoque en Frontend, aunque también tengo
+                experiencia Fullstack. Me apasiona crear interfaces modernas,
+                accesibles y funcionales.
+              </p>
+            </div>
+            <div className="w-[35%] h-full flex flex-col gap-20 items-center justify-center">
+              {/* Cuadrado centrado con transición al rotar */}
+              <div className="w-[300px] h-[300px] border-8 border-white bg-cyan-950 flex items-center justify-center">
+                {/* Rombo fijo */}
+                <div className="w-[280px] h-[280px] border-8 border-black rotate-[45deg] overflow-hidden">
+                  {/* Imagen fija, sin transiciones ni efectos */}
+                  <img
+                    src="/perfil.jpg"
+                    alt="Foto de perfil"
+                    className="w-full h-full object-cover rotate-[-45deg] scale-[1.08]"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <BotonCV />
+                <ToastContainer />
+              </div>
+            </div>
           </div>
         </section>
       </header>
       <main>
-        <section className="p-20 h-screen bg-amber-200" id="sobre-mi">
+        <section className="p-20 h-screen bg-cyan-200" id="sobre-mi">
           <p>Sobre mí</p>
         </section>
-        <section className="p-20 h-screen bg-amber-300" id="habilidades">
+        <section className="p-20 h-screen bg-cyan-300" id="habilidades">
           <p>Habilidades</p>
         </section>
-        <section className="p-20 h-screen bg-amber-400" id="educacion">
+        <section className="p-20 h-screen bg-cyan-400" id="educacion">
           <p>Educación</p>
         </section>
-        <section className="p-20 h-screen bg-amber-500" id="proyectos">
+        <section className="p-20 h-screen bg-cyan-500" id="proyectos">
           <p>Proyectos</p>
         </section>
-        <section className="p-20 h-screen bg-amber-600" id="contacto">
+        <section className="p-20 h-screen bg-cyan-600" id="contacto">
           <p>Contactos</p>
         </section>
       </main>
-      <footer className="bg-amber-700 text-center p-5">
+      <footer className="bg-cyan-700 text-center p-5">
         <div className="font-bold">
           <p>
             &copy; {new Date().getFullYear()}{" "}

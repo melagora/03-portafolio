@@ -6,10 +6,10 @@ const Menu = () => {
   return (
     <nav
       className="flex h-[10%] bg-cyan-900 text-white items-center px-10"
-      id="nav"
+      id="inicio"
     >
       <section className="w-[50%] flex justify-start font-bold">
-        <a href="#nav">
+        <a href="#inicio">
           <div className="border-4 border-y-cyan-600 hover:border-x-cyan-600 hover:border-y-inherit h-[45px] px-5 flex justify-center items-center">
             <p>CV - Melvin González</p>
           </div>
