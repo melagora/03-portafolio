@@ -1,13 +1,36 @@
-import { time } from "console";
-import Menu from "./components/Menu"; // ajusta el path si cambia
+"use client";
+
+import { useEffect, useRef } from "react";
+import Menu from "./components/Menu";
 
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.8;
+    }
+  }, []);
+
   return (
-    <div>
-      <header className="h-screen">
+    <div className="h-screen w-full">
+      <header className="h-full">
         <Menu />
-        <section className="px-20 h-[90%] bg-amber-100">
-          <p>1</p>
+        <section className="relative h-[90%] w-full overflow-hidden">
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+          >
+            <source src="/homeVideoBackground.mp4" type="video/mp4" />
+            Tu navegador no soporta el video.
+          </video>
+          <div className="relative z-10 text-white flex items-center justify-center h-full">
+            <p className="text-3xl font-bold">video de muestra</p>
+          </div>
         </section>
       </header>
       <main>
