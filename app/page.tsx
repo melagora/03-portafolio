@@ -43,15 +43,22 @@ export default function Home() {
               </p>
             </div>
             <div className="w-[35%] h-full flex flex-col gap-20 items-center justify-center">
-              {/* Cuadrado centrado con transición al rotar */}
-              <div className="w-[300px] h-[300px] border-8 border-white bg-cyan-950 flex items-center justify-center">
-                {/* Rombo fijo */}
-                <div className="w-[280px] h-[280px] border-8 border-black rotate-[45deg] overflow-hidden">
-                  {/* Imagen fija, sin transiciones ni efectos */}
+              {/* Cuadrado */}
+              <div className="w-[300px] h-[300px] border-8 border-cyan-300 hover:border-cyan-600 bg-cyan-950 flex items-center justify-center relative group">
+                {/* Rombo */}
+                <div className="w-[280px] h-[280px] border-8 border-cyan-600 group-hover:border-cyan-300 rotate-[45deg] overflow-hidden relative">
+                  {/* Imagen por defecto */}
                   <img
                     src="/perfil.jpg"
                     alt="Foto de perfil"
-                    className="w-full h-full object-cover rotate-[-45deg] scale-[1.08]"
+                    className="absolute top-0 left-0 w-full h-full object-cover rotate-[-45deg] scale-[1.08] transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+                  />
+
+                  {/* Imagen al hacer hover */}
+                  <img
+                    src="/perfilAnimado1x1.png"
+                    alt="Foto animada de perfil"
+                    className="absolute top-0 left-0 w-full h-full object-cover rotate-[-45deg] scale-[1.08] transition-opacity duration-500 opacity-0 group-hover:opacity-100"
                   />
                 </div>
               </div>

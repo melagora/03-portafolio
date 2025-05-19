@@ -41,7 +41,7 @@ const CVDownloadButton: React.FC = () => {
   return (
     <button
       onClick={handleDownload}
-      className="transition-all p-3 cursor-pointer bg-cyan-900/50  font-bold rounded-full flex items-center justify-center hover:bg-cyan-600/50 hover:text-white border-4 border-black hover:border-white"
+      className="transition-all p-3 cursor-pointer bg-cyan-950/50  font-bold rounded-full flex items-center justify-center hover:bg-cyan-600/50 hover:text-white border-4 border-cyan-600 hover:border-white"
     >
       {buttonText}
     </button>

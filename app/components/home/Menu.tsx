@@ -9,7 +9,12 @@ const Menu = () => {
       id="inicio"
     >
       <section className="w-[50%] flex justify-start font-bold">
-        <a href="#inicio">
+        <a
+          href="https://www.linkedin.com/in/melagora/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Melvin González LinkedIn"
+        >
           <div className="border-4 border-y-cyan-600 hover:border-x-cyan-600 hover:border-y-inherit h-[45px] px-5 flex justify-center items-center">
             <p>CV - Melvin González</p>
           </div>
