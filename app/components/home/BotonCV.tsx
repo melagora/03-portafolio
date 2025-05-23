@@ -11,7 +11,7 @@ const CVDownloadButton: React.FC = () => {
       const downloadPromise = new Promise<void>((resolve, reject) => {
         const link = document.createElement("a");
         link.href =
-          "https://drive.google.com/uc?export=download&id=1dFwF6LMCcdkdc7howqKFcZtlrGvQaoUv";
+          " https://drive.google.com/uc?export=download&id=12xsAwRJzgBSTUQf_6ZdcxWzoTCNZwRcX";
         link.download = "CV-FULLSTACK-MELVIN-GONZALEZ-2025.pdf";
         document.body.appendChild(link);
 
