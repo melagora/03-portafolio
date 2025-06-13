@@ -13,7 +13,7 @@ export default function Inicio() {
     }
   }, []);
   return (
-    <section className="relative h-[89.8%] xl:h-[90%] w-full overflow-hidden">
+    <section className="relative h-screen xl:h-[90%] w-full overflow-hidden">
       <video
         ref={videoRef}
         autoPlay
@@ -26,7 +26,7 @@ export default function Inicio() {
         <source src="/homeVideoBackground.mp4" type="video/mp4" />
         Tu navegador no soporta el video.
       </video>
-      <div className="DIVPRINCIPAL flex flex-col lg:flex-row lg:relative lg:z-10 text-white bg-cyan-950/75 items-center text-center justify-center h-full lg:pb-0">
+      <div className="DIVPRINCIPAL flex flex-col lg:flex-row lg:relative lg:z-10 text-white bg-cyan-950/75 items-center text-center justify-center h-screen max-h-full overflow-y-auto lg:pb-0">
         <div className="DIV1 order-2 lg:order-1 p-5 lg:p-10 gap-2 lg:gap-3 w-[100%] lg:w-[55%] h-full flex flex-col items-center justify-center">
           <p className="text-4xl lg:text-5xl font-bold">
             Desarrollador Front-End
