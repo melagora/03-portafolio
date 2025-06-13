@@ -1,13 +1,24 @@
 // app/components/Menu.tsx
 
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Cerrar menú al hacer scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [menuOpen]);
+
   return (
-    <nav className="flex flex-col xl:flex-row xl:h-[10%] h-auto bg-cyan-900 text-white px-10 py-5 items-start xl:items-center">
+    <nav className="relative z-50 flex flex-col xl:flex-row xl:h-[10%] h-auto bg-cyan-900 text-white px-10 p-2.5 xl:py-5 items-start xl:items-center transition-all duration-300 ease-in-out">
       {/* Sección CV */}
       <section className="w-full xl:w-[50%] flex justify-between xl:justify-start items-center">
         <a
@@ -32,9 +43,19 @@ const Menu = () => {
 
       {/* Menú de navegación */}
       <section
-        className={`w-full xl:w-[50%] flex-col xl:flex-row justify-center xl:justify-around items-center font-bold gap-3 xl:gap-0 mt-5 xl:mt-0 xl:flex ${
-          menuOpen ? "flex" : "hidden"
-        }`}
+        className={`
+        w-full xl:w-[50%]
+        flex-col xl:flex-row
+        items-center justify-center text-center
+        font-bold gap-3 xl:gap-0 pt-5 xl:pt-0
+        overflow-hidden transition-all duration-300 ease-in-out
+        ${
+          menuOpen
+            ? "flex max-h-[500px] opacity-100"
+            : "hidden max-h-0 opacity-0"
+        }
+        xl:flex xl:max-h-none xl:opacity-100
+      `}
       >
         <a href="#sobre-mi" onClick={() => setMenuOpen(false)}>
           <div className="enlacesMenu">Sobre mí</div>
