@@ -13,7 +13,7 @@ export default function Inicio() {
     }
   }, []);
   return (
-    <section className="relative h-[89.6%] xl:h-[90%] w-full overflow-hidden">
+    <section className="relative h-[89.8%] xl:h-[90%] w-full overflow-hidden">
       <video
         ref={videoRef}
         autoPlay
