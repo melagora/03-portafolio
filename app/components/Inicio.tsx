@@ -32,7 +32,7 @@ export default function Inicio() {
           <p className="text-5xl font-bold">Desarrollador Front-End</p>
           <p className="text-sm font-extralight">
             Desarrollador con enfoque en Frontend, aunque también tengo
-            experiencia Fullstack. Me apasiona crear interfaces modernas,
+            experiencia FullStack. Me apasiona crear interfaces modernas,
             accesibles y funcionales.
           </p>
         </div>
