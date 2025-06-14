@@ -20,7 +20,7 @@ const Menu = () => {
   return (
     <nav className="relative z-50 flex flex-col xl:flex-row xl:h-[10%] h-auto bg-cyan-900 text-white px-10 p-2.5 xl:py-5 items-start xl:items-center transition-all duration-300 ease-in-out">
       {/* Sección CV */}
-      <section className="w-full xl:w-[50%] flex justify-between xl:justify-start items-center">
+      <section className="w-full xl:w-[25%] flex justify-between xl:justify-start items-center">
         <a
           href="https://www.linkedin.com/in/melagora/"
           target="_blank"
@@ -44,34 +44,34 @@ const Menu = () => {
       {/* Menú de navegación */}
       <section
         className={`
-        w-full xl:w-[50%]
-        flex-col xl:flex-row
-        items-center justify-center text-center
-        font-bold gap-3 xl:gap-0 pt-5 xl:pt-0
-        overflow-hidden transition-all duration-300 ease-in-out
-        ${
-          menuOpen
-            ? "flex max-h-[500px] opacity-100"
-            : "hidden max-h-0 opacity-0"
-        }
-        xl:flex xl:max-h-none xl:opacity-100
-      `}
+    w-full xl:w-[100%]
+    flex-col xl:flex-row
+    items-start xl:items-center
+    justify-start xl:justify-end
+    font-bold pt-5 xl:pt-0
+    overflow-hidden transition-all duration-300 ease-in-out
+    ${menuOpen ? "flex max-h-[500px] opacity-100" : "hidden max-h-0 opacity-0"}
+    xl:flex xl:max-h-none xl:opacity-100
+  `}
       >
-        <a href="#sobre-mi" onClick={() => setMenuOpen(false)}>
-          <div className="enlacesMenu">Sobre mí</div>
-        </a>
-        <a href="#habilidades" onClick={() => setMenuOpen(false)}>
-          <div className="enlacesMenu">Habilidades</div>
-        </a>
-        <a href="#educacion" onClick={() => setMenuOpen(false)}>
-          <div className="enlacesMenu">Educación</div>
-        </a>
-        <a href="#proyectos" onClick={() => setMenuOpen(false)}>
-          <div className="enlacesMenu">Proyectos</div>
-        </a>
-        <a href="#contacto" onClick={() => setMenuOpen(false)}>
-          <div className="enlacesMenu">Contacto</div>
-        </a>
+        {[
+          { href: "#sobre-mi", text: "Sobre mí" },
+          { href: "#habilidades", text: "Habilidades" },
+          { href: "#educacion", text: "Educación" },
+          { href: "#proyectos", text: "Proyectos" },
+          { href: "#contacto", text: "Contacto" },
+        ].map(({ href, text }) => (
+          <a
+            key={href}
+            href={href}
+            onClick={() => setMenuOpen(false)}
+            className="w-full xl:w-auto"
+          >
+            <div className="w-full h-[60px] px-10 flex items-center justify-center hover:bg-cyan-600 hover:underline transition-colors duration-300">
+              {text}
+            </div>
+          </a>
+        ))}
       </section>
     </nav>
   );
