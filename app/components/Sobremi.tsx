@@ -7,7 +7,7 @@ import { useEffect } from "react";
 export default function Sobremi() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Duración del fade
+      duration: 100, // Duración del fade
       once: false, // Solo una vez al hacer scroll
     });
   }, []);
@@ -18,7 +18,7 @@ export default function Sobremi() {
       id="sobre-mi"
     >
       <div
-        className="w-[70%] h-full flex flex-col items-center justify-center bg-cyan-950 text-white p-6 rounded shadow-md gap-10"
+        className="w-[100%] sm:w-[70%] text-sm md:text-base h-full flex flex-col items-center text-justify justify-center sm:bg-cyan-950 sm:text-white p-6 rounded shadow-md gap-10"
         data-aos="fade-up"
       >
         <div data-aos="fade-up" data-aos-delay="100">
@@ -51,14 +51,14 @@ export default function Sobremi() {
             en cada proyecto que desarrollo.
           </p>
         </div>
-        <div data-aos="fade-up" data-aos-delay="400">
+        {/* <div data-aos="fade-up" data-aos-delay="400">
           <p>
             Estoy listo para asumir nuevos retos, aportar valor y seguir
             creciendo junto a un equipo profesional. Si buscas un desarrollador
             Full Stack con base sólida en front-end y conocimientos back-end,
             ¡estaré encantado de conectar!
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );
