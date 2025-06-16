@@ -7,9 +7,12 @@ import { useEffect } from "react";
 export default function Sobremi() {
   useEffect(() => {
     AOS.init({
-      duration: 100, // Duración del fade
-      once: false, // Solo una vez al hacer scroll
+      duration: 1500, // Duración más perceptible
+      once: false, // Se repite cada vez que entra al viewport
+      easing: "ease-in-out", // Animación más suave
+      offset: 150, // Empieza un poco antes de entrar
     });
+    AOS.refresh(); // Forzar refresco
   }, []);
 
   return (
@@ -18,10 +21,17 @@ export default function Sobremi() {
       id="sobre-mi"
     >
       <div
-        className="w-[100%] sm:w-[70%] text-sm md:text-base h-full flex flex-col items-center text-justify justify-center sm:bg-cyan-950 sm:text-white p-6 rounded shadow-md gap-10"
+        className="w-[100%] sm:w-[70%] text-sm md:text-base h-full flex flex-col items-center text-justify justify-center sm:bg-cyan-950 p-6 rounded shadow-md gap-6 lg:gap-10"
         data-aos="fade-up"
+        data-aos-duration="2000"
+        data-aos-delay="100"
       >
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div
+          data-aos="slide-up"
+          data-aos-delay="100"
+          data-aos-duration="2000"
+          className="bg-cyan-300 border-1 border-cyan-400 rounded-lg p-4"
+        >
           <p>
             Desarrollador Web con enfoque principal en front-end, apasionado por
             crear interfaces modernas, responsivas y funcionales que brinden una
@@ -32,7 +42,12 @@ export default function Sobremi() {
             del código y la mantenibilidad.
           </p>
         </div>
-        <div data-aos="fade-up" data-aos-delay="200">
+        <div
+          data-aos="slide-up"
+          data-aos-delay="200"
+          data-aos-duration="2000"
+          className="bg-cyan-400 border-1 border-cyan-500 rounded-lg p-4"
+        >
           <p>
             Además, tengo experiencia en el desarrollo back-end con PHP y
             Laravel, creando APIs RESTful robustas que permiten la gestión
@@ -42,7 +57,12 @@ export default function Sobremi() {
             multidisciplinarios.
           </p>
         </div>
-        <div data-aos="fade-up" data-aos-delay="300">
+        <div
+          data-aos="slide-up"
+          data-aos-delay="300"
+          data-aos-duration="2000"
+          className="bg-cyan-600 border-1 border-cyan-700 rounded-lg p-4"
+        >
           <p>
             Para el diseño y estilado, utilizo CSS puro, así como frameworks
             como Tailwind y Bootstrap, asegurando interfaces consistentes,
@@ -51,14 +71,6 @@ export default function Sobremi() {
             en cada proyecto que desarrollo.
           </p>
         </div>
-        {/* <div data-aos="fade-up" data-aos-delay="400">
-          <p>
-            Estoy listo para asumir nuevos retos, aportar valor y seguir
-            creciendo junto a un equipo profesional. Si buscas un desarrollador
-            Full Stack con base sólida en front-end y conocimientos back-end,
-            ¡estaré encantado de conectar!
-          </p>
-        </div> */}
       </div>
     </section>
   );
