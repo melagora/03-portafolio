@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Portafolio - Melvin González",
   description: "Creado con React, Next.js, TypeScript y Tailwind CSS",
+  icons: {
+    icon: "/icons8User.png",
+  },
 };
 
 export default function RootLayout({
