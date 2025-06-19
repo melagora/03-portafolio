@@ -5,3 +5,18 @@
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes glowBorder {
+  0%,
+  100% {
+    border-color: rgba(255, 255, 255, 1);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.glow-active {
+  border: 2px solid white;
+  animation: glowBorder 1.5s infinite;
+}
