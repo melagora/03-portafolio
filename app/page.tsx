@@ -4,6 +4,7 @@ import Menu from "./components/home/Menu";
 import Inicio from "./components/Inicio";
 import Sobremi from "./components/Sobremi";
 import Habilidades from "./components/Habilidades";
+import Educacion from "./components/Educacion";
 
 export default function Home() {
   return (
@@ -15,9 +16,7 @@ export default function Home() {
       <main>
         <Sobremi />
         <Habilidades />
-        <section className="p-20 h-screen bg-cyan-400" id="educacion">
-          <p>Educación</p>
-        </section>
+        <Educacion />
         <section className="p-20 h-screen bg-cyan-500" id="proyectos">
           <p>Proyectos</p>
         </section>
