@@ -32,7 +32,7 @@ export default function Inicio() {
                text-white bg-cyan-950/75 items-center text-center 
                justify-center overflow-hidden lg:pb-0"
       >
-        <div className="DIV1 order-2 lg:order-1 p-5 lg:p-10 gap-2 lg:gap-3 w-[100%] lg:w-[55%] h-full flex flex-col items-center justify-center">
+        <div className="DIV1 order-2 lg:order-1 p-5 lg:p-10 gap-2 lg:gap-3 w-[100%] lg:w-[55%] h-full flex flex-col items-center justify-center ">
           <p className="text-4xl lg:text-5xl font-bold">
             Desarrollador Front-End
           </p>

@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 
 const CVDownloadButton: React.FC = () => {
   const [buttonText, setButtonText] = useState<string>(
-    "Descargar Hoja de vida"
+    "Descargar Hoja de vida",
   );
 
   const handleDownload = (): void => {
@@ -11,8 +11,8 @@ const CVDownloadButton: React.FC = () => {
       const downloadPromise = new Promise<void>((resolve, reject) => {
         const link = document.createElement("a");
         link.href =
-          " https://drive.google.com/uc?export=download&id=12xsAwRJzgBSTUQf_6ZdcxWzoTCNZwRcX";
-        link.download = "CV-FULLSTACK-MELVIN-GONZALEZ-2025.pdf";
+          "https://drive.google.com/file/d/1Gk9ayztTkF46PyL6zN8_6vQrcy1r24cT/view?usp=drive_link";
+        link.download = "CV-FULLSTACK-MELVIN-GONZALEZ-2026.pdf";
         document.body.appendChild(link);
 
         setTimeout(() => {

@@ -70,7 +70,7 @@ export default function Habilidades() {
       id="habilidades"
     >
       <div
-        className="w-full sm:w-[70%] text-sm md:text-base h-full flex items-center justify-center sm:bg-cyan-900 p-6 rounded shadow-md gap-2 lg:gap-2 font-bold overflow-hidden"
+        className="w-full sm:w-[70%] text-sm md:text-base h-full flex items-center justify-center sm:bg-cyan-950 p-6 gap-2 lg:gap-2 font-bold overflow-hidden"
         data-aos="fade-up"
         data-aos-duration="2000"
         data-aos-delay="100"
